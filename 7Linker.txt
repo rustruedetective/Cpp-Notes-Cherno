@@ -1,0 +1,45 @@
+Translation Units -> Linking -> Executable
+
+1. Linker also helps find where the main function/entry point is.
+You can compile without a main function.
+But when we try to link, it would say "no entry point".
+
+Every .exe (maybe even executables) needs an entry point.
+
+Property Pages->Linker->Advanced->Entry Point (we can change it)
+(so entry point doesnt necessarily have to be a main function,
+it can be anything else too)
+
+
+
+2. Errors related to compiler C3234,
+errors related to linker LNK32432.
+
+
+
+3. When the linker cant find something its looking for, it generates a "unresolved external symbol" error.
+
+
+
+4. When there are multiple definitions of the same function we get error.
+
+
+
+5. External Link Errors:-
+a. Unresolved Symbol: When the linker cant find our declaration's function anywhere it gives us the unresolved external symbol error.
+Fix1: We could avoid it if we never use the function in our code.
+a2. But what if it is inside a wrapper.
+Fix2: We could avoid it if our wrapper function is declared to be static.
+
+b. Multiple Definitions: Or when there are multiple defintions of same function.
+(Multiple definitions could happen due to definitions being in header files)
+Fix1: Use the keyword static so each definition remains local.
+Fix2: Use the keyword inline which replaces the function with the block of code in it.
+Fix3: Just remove definiton from header file and put in cpp and only include header file multiple times,
+this way the declarations repeat but the function signature is the same.
+
+
+
+6. There are two types of linking:-
+a. Static Linking.
+b. Dynamic Linking.

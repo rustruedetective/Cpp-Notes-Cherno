@@ -1,0 +1,21 @@
+1. if functions take in a ref in parameters
+we can only input lvalues as arguments
+and not rvalues
+
+2. we have a test for detecting an rvalue
+
+simply try taking a reference of the value:-
+type& var = value;
+-if its successful its an lvalue
+-if its not successful its an rvalue
+
+3. similarly as 1.
+we can only take in rvalues and not lvalues in our function by:
+taking two ampersands
+type&& var = value;
+
+4. why do we worry about something being temporary? (e.g while taking in rvlaue in a function)
+cause the temp object is not permanent we can overload functions that use this temp variable sparingly (changing it as will)
+with no worry about memory management
+
+so we can use these optimizations and steal extra resources

@@ -1,0 +1,4 @@
+So i discovered
+if you include the gcc's precompiled header in your cpp file
+like #include "abc.h.gch"
+it kind of...breaks the compiler i think

@@ -1,0 +1,1 @@
+{"otherData": {},"traceEvents":[{"cat":"function","dur":390355,"name":"Fun","ph":"X","pid":0,"tid":3924016082,"ts":1634839165251382},{"cat":"function","dur":579553,"name":"Fun2","ph":"X","pid":0,"tid":3893370984,"ts":1634839165251801},{"cat":"function","dur":580671,"name":"TestingFunc","ph":"X","pid":0,"tid":3088371139,"ts":1634839165250870}]}

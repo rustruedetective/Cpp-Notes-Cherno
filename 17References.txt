@@ -1,0 +1,14 @@
+1. References are like pointers but:-
+Assignment of address is done automatically.
+Dereferencing is done automatically.
+References are not variables so they dont have space in memory like pointers.
+They are abstaction of pointers.
+
+2. They are like syntactiall sugar for pointers.
+They just need to be initialized with int& or something but the int must touch the &.
+They can be assgined a new variable's address directly.
+They can modify original variable like they have address to it.
+
+3. A reference must be initialized when declared it cant just be declared alone.
+A reference cannot be reassigned.
+It cannot be assigned null value as well, since it would just directly go to the null's address.

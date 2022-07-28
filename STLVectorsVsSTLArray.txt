@@ -1,0 +1,4 @@
+Stl Vector vs Stl Array
+
+Vectors are dynamically allocated
+Arrays are allocated on the stack

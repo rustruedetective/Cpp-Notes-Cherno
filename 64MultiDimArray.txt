@@ -1,0 +1,13 @@
+1. Memory fragmentation is caused by multi dim arrays which are allocated dynamically.
+
+2. memory fragmentation:
+What the heap does is allocate the new int[] arrays in heap
+so instead of having them in a continuous memory we have them in seperate spaces in the heap
+so they can be close or very far away in memory
+causing alot of cache misses
+
+3. So it is very slow to iterate over these
+instead of iterating over an array which is made in a row (normal array)
+
+4. So we just need to make sure to place the memory close to each other
+which would mean more cache hits and less cache misses

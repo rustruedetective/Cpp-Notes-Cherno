@@ -1,0 +1,5 @@
+It is like having multiple types for the same type.
+
+So your parent class is the main type, which has multiple child classes of different types.
+
+So parent type has multiple different child types.

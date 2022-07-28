@@ -1,0 +1,15 @@
+1. In order to compile only and not link do this:-
+g++ -c file.cpp
+
+
+
+2. External Link Errors:-
+a. Unresolved Symbol: When the linker cant find our declaration's function anywhere it gives us the unresolved external symbol error.
+Fix1: We could avoid it if we never use the function in our code.
+a2. But what if it is inside a wrapper.
+Fix2: We could avoid it if our wrapper function is declared to be static.
+
+b. Multiple Definitions: Due to a variety of reasons.
+Fix1: Use the keyword static so each definition remains local.
+Fix2: Use the keyword inline which replaces the function with the block of code in it.
+Fix3: Use headers files with declarations.

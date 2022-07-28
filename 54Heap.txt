@@ -1,0 +1,34 @@
+(Cache misses: when you dont have contiguous memory you will have to traverse unwanted memory to get to the desired one
+this is the case in heap allocation, this missed/ignored memory is called missed cache or termed cache misses)
+
+1. The new calls malloc function.
+And in turn malloc calls system specific underlying functions.
+Those functions allocate memory in the heap.
+
+2. When we start our program, a chunk of RAM is allocated to it.
+And the program keeps track of a free list.
+Free list: it keeps track of blocks of memory which are free and their addresses.
+
+So malloc's call goes through the free list and finds free blocks of memory for us and returns its address.
+This is if the freelist has free blocks bigger or equal to the size we need.
+
+3. The free list is updated so this block is no longer free...
+Alot of other bookeeping stuff is also done. Malloc's call does all this.
+The exact details of call depend on system.
+
+4. However if the size in free list is not what we need then malloc's call asks the os to find new memory in RAM... 
+This is a bit costly
+
+5. The argument of no cache misses in stack vs alot of cache misses in heap is only valid for high amounts of accesses, e.g in millions, in lower/usual amounts of accesses it wont matter.
+   Allocation is more slow in when done dynamically (on heap) even when very few is done.
+
+SUMMARY:-
+a. Stack allocation is one CPU instruction. (mov in assembly)
+Allocation is very fast
+
+b. Heap allocation is a complex thing which gets even more complex when the free list does not have enough memory.
+(complex as in the book keeping stuff)
+Allocation is very slow
+
+(the assembly code shows it calling new operation (malloc call) and a bunch of other shit)
+(assembly code also shows beefy delete keyword code)

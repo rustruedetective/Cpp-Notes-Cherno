@@ -1,0 +1,18 @@
+1. The if statements/branches provide an overhead when writing optimized code.
+As they instruct which specific instruction to go to (assembly).
+Ofcourse the condition should be stored somewhere...and it gets complicated 
+at low level.
+
+
+2. The operators like == equality operator is actually and overloaded operator.
+
+3. The equality operator or other operators grab the particular memory of the variable and compare the number of bits stored in that memory.
+Not compare the number in a magical fashion.
+
+4. Visual Studio has this "step into disassebly on right clicking if breakpoint (not sure if breakpoint is necessary). It lets us see the assembly
+code for each line of code.
+
+5. nullptr
+
+6. yes else if is actually just an else statement with the first line of code being another if. (not sure if this is important, but i see some
+serious nesting of blocks due to this, like each new else if is a nested block)

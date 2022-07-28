@@ -1,0 +1,46 @@
+1. Data is stored in stack or heap.
+
+2.*** C++ has primitive data types.
+The difference between them is how much size they have.
+
+All types of advanced data types are defined using these primitive data types.
+
+3. int is generally 4 bytes.
+Would be different for different compilers.
+
+4 bytes mean having a numbers for -2billion to +2billion.
+4 bytes = 4*8 = 32 bits
+32nd bit is for sign of integer
+31 bits equal 2billion values
+
+unsigned int would mean
+all 32 bits being used, and sign is positive
+so 4billion values
+
+4. integer types are:-
+char -> 1 byte
+short -> 2 bytes
+int -> 4 bytes
+long -> 4 bytes
+long long -> 8 bytes
+
+all above can be assigned unsigned
+
+5. char is used for clarity
+and for compiler to interpret it as a character value
+
+6. decimals have
+float and double
+
+float -> 4 bytes
+double -> 8 bytes
+
+7. in c++ all decimal values automatically become double unless specified by a f or F at end
+
+
+8. bool is true or false
+all numbers -> true
+zero -> false
+
+bool -> 1 byte
+(yes it cant be a bit because computer deals in blocks of bytes)

@@ -1,0 +1,7 @@
+1. other ways to assign:-
+var1.assign(var2);
+var1.operator=(var2);
+
+2. i think the stl code is very precise in its use of different semantics
+so if they use macro for one particular thing
+they should be using similar macros for the same type of things

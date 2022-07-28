@@ -1,0 +1,6 @@
+1. Games have a game loop to keep the frames running.
+
+2. Game loops should use while loop, as they are not dependant on iterations.
+
+3. While operations like traversing arrays should use a for loop as we
+know they involve checking conditions on each iteration.

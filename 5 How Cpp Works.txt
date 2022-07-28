@@ -1,0 +1,58 @@
+HOW C++ WORKS:-
+
+1. Our source code is compiled into a binary by a compiler
+NOW: that binary could be a program OR A LIBRARY!!!
+
+
+
+2. a.The preprocessor include just pastes the WHOLE code from the included header file in source file before compilation.
+   b. We need the header file as it includes the declaration to functions that we use.
+   c. The main function is the entry point to your program.
+
+
+
+3. Every cpp file in your project needs to compile.
+Header files dont need to be compiled.
+
+
+
+4.** In your project all cpp files get compiled to individual obj files.
+The linker glues these obj files together into one executable.
+
+
+
+5.** The compiler only checks for function declarations, not for definitions.
+So our header files just have the declarations and the compiler compiles the individual cpp files
+into individual obj files.
+
+Then the linker finds the definition of the declarations later and links them.
+If it cant find the definition, it gives linker error.
+
+Linker might give 1.coding convention 2.actual function id on error.
+
+
+
+6. In Visual Studio:-
+a. Solution Configurations
+b. Solution Platforms
+c. Property Pages (Right click project file->Property)
+(Here c. defines various rules and settings of each a. and b.
+Changing these settings in c. results in different ways the compiler will compile the project.)
+
+Important settings in c.:-
+i. Configuration Properties->General->Project Defaults->Configuration Type (exe, dll, lib...)
+ii. C/C++ ->General,Optimization...etc (these all are compiler settings)
+
+sometimes while optimizing you also need this:-
+C/C++ ->Code Generation->Basic Runtime Checks->Default
+
+(x86 and win32 is the same)
+
+d. debug vs release mode
+Property Pages->C/C++ -> Optimization->Optimization (disabled vs Maximum Speed)
+in active/release mode Optimization is turned on but makes it hard to debug
+in debug mode Optimization is turned off but it is easier to debug
+
+e. Error list scrapes the output window for errors, it lacks details.
+
+f. Right click project and build it to get an executable (exe) file in the project's folder.

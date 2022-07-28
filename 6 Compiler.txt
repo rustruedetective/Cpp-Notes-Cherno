@@ -1,0 +1,50 @@
+Compiler:-
+
+Source Code -> Compiling -> Linking -> Executable
+
+Source Files -> Compiler -> Object Files
+
+1. Compiler does:-
+a. Preprocessing
+b. tokenizing until we get an abstract syntax tree
+c. the end result is 1.data and 2.instructions (object files)
+(the size of object files is so big because all of header files get included in it)
+
+
+
+2. Files have no real value here like in java, its just the source code in them.
+Although compiler can differentiate btw .c .cpp and .h on its own.
+
+Here files are called:-
+Translation Units
+
+3. Now you can have 1 or many Translation Units depending on what you did.
+If you included the cpp files into one mega cpp file, we have 1 Translation Unit.
+
+If we have individual cpp files, all have their own code, then we have many Translation Units.
+
+
+
+4. The preprocessor converts .cpp into .i or preprocessed file.
+(We can enable this in visual studio:-
+Property Pages-> C/C++ ->preprocessor->Preprocess to a File)
+
+
+
+5. The object file is a binary file that has part of your executable inside it.
+(We can enable this in visual studio:-
+Property Pages-> C/C++ ->Output Files->Assembler Output
+(yeah now we see the assembly code))
+
+
+
+6. Constant folding:-
+Any expression that results in a constant at runtime will be made into that constant by compiler
+before outputing object/assembly file.
+
+
+
+7. Function Signatures:-
+There would be function calls in the .asm file that have the function@jaw8fj389
+now these are functions signatures that we would need to be linked by the compiler from different
+object files if not provided inside same file.

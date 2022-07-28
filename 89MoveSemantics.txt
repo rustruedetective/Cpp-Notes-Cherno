@@ -1,0 +1,9 @@
+1. (c++11) : it introduced rvalue references which were necessary for move semantics
+Move Semantics: they allow us to move objects around
+
+2. Use case: when we dont want to copy an object from one place to another
+e.g when we pass to function, it would take ownership which we dont want to give thus instead resort to copying it
+e.g creating an object inside a function then returning it
+
+this above stuff does not sound like much for small objects
+but for large objects which heap allocate alot of members this becomes a huge problem

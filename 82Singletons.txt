@@ -1,0 +1,24 @@
+1. Singleton design pattern
+a class which has only 1 instance...lol
+
+but whats the purpose of a class if you cant instanciate alot of objects from it?
+Well they have use cases
+
+a. e.g you want to put functions that control the program in global space e.g the game loop in a class
+but now you have a problem, theres only one game loop, there should be only 1 object that has all the 
+global scope functions in it
+we dont want multiple objects controlling our global scope
+thus we use singletons
+
+b. type of object that need to be used so often that we dont want the hasle to reinstantiate them
+and we only one instance is sufficiant e.g random no. generator, renderer
+
+c. when we just want to put our functions in a class instead of a namespace
+e.g static members and methods
+
+
+2. We can just make our functions static and use like SingletonClass::Func()
+but instead we do SingletonClass::Get().Func()
+this is because actually singleton is indeed a class and we need to get our single instance and use member functions from that instance
+
+3. dont forget to make the copy constructor private or delete it

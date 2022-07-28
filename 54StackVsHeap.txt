@@ -1,0 +1,63 @@
+(There is another memory location use as cpu cache. No its not related to todays topic.)
+(Contiguous memory means a continuous row of memory. In a lane.)
+(Memory allocation is actually us asking C++ to give us memory in the ram.)
+
+*watch video again to see clear memory allocation addresses, if you are confused in stack allocation
+
+1. When program starts, it gets divided into different memories.
+Two main ones are stack and the heap.
+
+2. Os loads program on memory and assigns some RAM to it.
+Stack and Heap are areas in the RAM.
+
+3. Stack has a fixed size. (about 2mb?)
+Heap's size can change.
+
+4. The stack and heap store data/variables that belong to our program.
+C++ lets us put the data/variables in this memory.
+
+5. Stack allocation:
+   The variable is stored in its allocated memory, then the next variable is stored right next to it and so on...
+   This happens because the stack pointer stores a value in memory then moves x bytes fwd in memory, this x is the memory required for next value.
+   Now be aware that since this is a stack first in first out, the addresses of new values are previous to older ones, as stack pointer moves up the chain.
+   
+   Stack Pointer moves from bottom to top of the stack where fresh addresses are
+   Top 00000000 -> 11111111 Bottom
+   Stack pointer's movement direction <- (backwards)
+
+   Ofcourse each array or class will have its own continuous address -> in this direction
+
+   Process: Move stack pointer, store memory, return new address.
+
+   this is extremely fast
+
+6. The whole stack allocation is just one CPU instruction.
+
+7. Heap allocation:
+   The memory needed for variables or complete arrays/classes is first found and then allocated wherever it is possible.
+   Although arrays and classes still have elements/members in one continuous memory as they are a complete entity.
+
+
+8. The smart pointers, unique/shared also use the new keyword so they are also heap allocated.
+Although they take care of deleting it.
+
+9. Memory Management:-
+Stack: just pops of the memory and moves stack pointer down(forward) again when it goes out of scope.
+Heap: needs to be manaually deleted.
+
+10. STACK VS HEAP
+- Stack: allocation is very fast
+cache misses 0
+
+- Heap: allocation is very slow
+cache misses exist, but dont cause performance issue unless its a million variables worth accesses on heap allocations
+
+11. always use stack unless absolutely necessary to use heap
+cause its allocation is very fast (only 1 cpu instruction)
+
+12. So if you allocate stuff on the heap before your main program's code starts, you can get same performance with stack and heap
+until ofcourse you have rediculous amounts of heap allocations
+1gb worth of heap pre-allocations are normal/wont affect performance
+
+13. Cache miss worst case scenario:
+if we have millions of heap allocated variables and every single one has a cache miss

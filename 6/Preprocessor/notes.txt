@@ -1,0 +1,5 @@
+1. to get preprocessed output use:-
+g++ -E file.cpp
+
+2. Note that the whole of header file was included,
+when we remove the include header file we get a short code

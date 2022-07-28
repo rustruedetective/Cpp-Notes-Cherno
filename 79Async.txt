@@ -1,0 +1,51 @@
+1. Since a cpu has multiple cores now so it can do parallel processing
+multiple threads can be made to get the work done faster
+
+so we can run instructions in parallel
+we dont have to wait for previous instruction to finish to move onto the next instruction
+
+
+2. concepts:-
+scheduling
+multithreading
+parallelizing
+
+3. you cant put any function in a thread...
+you need to cater it for multithreading first
+
+4. game engines process alot of data, so threading helps
+the game loading screens are not just loading variables in ram, they are also reading files, putting shaders in gpus, uncompressing files...etc
+
+e.g everytime we need to load a mesh model why not put them in multithreading, because they are indep of other mesh models
+instead of just waiting for one model to load then load the other
+you can also load the map while loading these too
+maybe even start the game while environment is still loading
+
+5. worker thread is different from a normal thread
+
+6. ofcourse multiple threads mean we load stuff very quicker
+so our program executes much faster
+
+7. c# has a parallel for loop already built into it
+c++ does not
+in c++ building it ourselves from scratch is a bit lengthy
+
+--------------------------------------------------------
+
+8. this tutorial focuses on std::async
+async this pushes the tasks back in threads until they are complete
+calling this async to do tasks in background is like javascript
+but the async here is on threads and not an event loop, so here async does stuff in parallel instead of waiting for each async call to finish like in javascript
+
+9. Problems:-
+a. there is a problem with funToAsync, what if the variables passed in it go out of scope in the outer function while this thread is still running?
+   E.g: a function calls a thread which changes this functions local variables, but the outer function ends its call while the thread has not been completed
+   Sol:
+
+b. the second problem is, what if multiple threads share/access the same resource, one thread can change it while other thread depended on its previous value
+   E.g: an array needs to push stuff in an order, threads will attempt to push an element while another thread's element is being pushed
+   Sol: so we need to "lock" these resources while on thread uses them
+   we use "Mutex" (and spin lock) for this
+
+10. Visual Studio:-
+Debug->Windows->Parallel Stacks

@@ -1,0 +1,9 @@
+Rewatch this video when needed...lol
+
+1. CI: build automation and testing
+we need to automate the process of compiling code on all platforms and also testing if it even works correctly
+
+2. use an online service "jenkins.io"
+
+3. what it does is not make us open up every pc/hardware and compile our program for it, all will be done online automatically
+and also it will test for bugs

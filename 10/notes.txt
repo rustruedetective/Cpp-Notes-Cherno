@@ -1,0 +1,18 @@
+1. Please note that "" are used to include files relative to current directory.
+<> are used to include files relative to include directory defined by compiler.
+
+2. There are two types of guards:-
+->
+#ifndef CONSTANT
+#define CONSTANT
+
+#endif
+
+->
+#pragma once
+
+3. Iostream is a header file just like stdlib.h in c.
+Only thing is the .h was removed so c and c++ compiler headers could be differentiated.
+
+4. Including libararies in the header's source file is ok, as it degenerates into compiled code.
+But dont include it the header file.

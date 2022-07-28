@@ -1,0 +1,7 @@
+1. a static analyser will check for errors in code
+but its a bit different from compiler errors as it can detect some more logic errors too
+e.g so lets say your loop never ends, it would point that out, even tell in detail like the loop check is always positive
+e.g a char* not having memory for a null character when copying string to it
+
+2. PVS-Studio is a static analyser tool
+pvs can help optimize our code too, e.g if some value is always same, it would point it out

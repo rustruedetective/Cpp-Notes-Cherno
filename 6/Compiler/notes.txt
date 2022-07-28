@@ -1,0 +1,4 @@
+1. to get assembly file use:-
+g++ -S file.cpp
+
+2. Note that when we included the header file we got some extra instructions.

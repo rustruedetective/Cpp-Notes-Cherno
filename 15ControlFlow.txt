@@ -1,0 +1,8 @@
+1. continue, break, return
+continue - only used in loops, to skip the current iteration
+break - ends loop or if statement
+return - ends a function and can return some value
+
+2. Code below return is called "dead code"
+
+3. YOU CAN ALSO CHANGE FLOW USING THE PROGRAM COUNTER/INSTRUCTION POINTER!!!

@@ -1,0 +1,25 @@
+1. Thread runs peice of code.
+One instruction at a time.
+
+But what if we want more than one instruction at a time.
+Or maybe want to run multiple pieces of code at the same time?
+
+2. 
+
+3. Use case:
+while we use cin, it halts the program until we get some input
+why not make a seperate thread that runs the code in background (e.g writing to file, calculating something, logging etc) while you ask for input
+
+4. It helps to increase performance.
+
+5. We need to join our new thread, in case our main thread finishes it would just terminate the program, we say join() aka wait until it the new thread has finished, and then join it to main process.
+
+6. Sub or main thread
+both/all use 100% of cpu. (yeah any language's code)
+
+Which can be a problem.
+
+***Solve it by limiting the time it executes by adding delays.
+
+7. Threads primary purpose is optimization
+And trying to do things at once which halt program etc

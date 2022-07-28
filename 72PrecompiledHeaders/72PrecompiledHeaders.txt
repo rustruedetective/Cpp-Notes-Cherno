@@ -1,0 +1,33 @@
+1. Gcc:-
+To create a precompiled header file, simply compile it as you would any other file, if necessary using the -x option to make the driver
+treat it as a C or C++ header file. You may want to use a tool like make to keep the precompiled header up-to-date when the headers it
+contains change.
+a. in source.cpp put " #include "header.h" " like usual
+b. compile the header.h by "g++ header.h" (gcc outputs a .h.gch format)
+c. compile source like normal "g++ source.cpp" (no need to change the " #include "header.h" ")
+
+2. Advantages:-
+    -these are vital for larger projects
+
+    -so you take a bunch of headerfiles and compile them
+    now the compiler can take this instead of needing to read the headers seperately
+    
+    -the stl has header files
+    if we read e.g <vector> then all headers need to be read everytime and compiled with our final binary
+    so why note precompile all these headers instead of recompiling them again and again
+    
+    -if we dont use precompiled headers then we get our compile times would unecessarily be long due to above reasons
+
+3. Disadvantages:-
+    -do not put everything in your project in your pch
+    it will result in faster build time
+    but then when you change things in your project your pch will need to be recompiled too and that takes alot of time
+
+    -it will hide what your code as its compiled
+    so say your pch has other dependencies...now you cant read to figure this out
+    or you wont know which function definitions are in it
+
+4. Uses:-
+- your code that wont change e.g your personal logging library
+- very large code thats not your own and which does not change e.g(windows api, stl)
+

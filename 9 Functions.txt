@@ -1,0 +1,9 @@
+1. Take Values
+Return Values
+Modify some part of code or the values taken in
+
+2. for main function the return value is automatically 0
+but for normal functions with return types we must give them return values.
+
+3. in release mode you can actually get away with no return statements
+but it could cause undefined behaviour later on

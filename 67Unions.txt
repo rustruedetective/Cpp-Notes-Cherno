@@ -1,0 +1,13 @@
+1. union is like a struct or class
+but it can only occupy memory of one member at a time
+
+2. memory is set to the biggest data member
+
+3. you can add non static/static functions
+but no virtual shinanigans
+
+4. They use them for something like type punning
+What if we need a structure like color, where the three members rep color and can be either green or red or blue, but not all at the same time
+
+5. they are usually used namelessly/anonymously
+and not with methods

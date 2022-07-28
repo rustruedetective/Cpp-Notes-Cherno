@@ -1,0 +1,15 @@
+1. explicitly stating that the argument to a function should be treated as an rvalue is where we have two options:-
+a. casting to type&& rvlaue ref
+b. using the std::move function
+
+2. in this video we will be moving an existing object into another existing object
+
+3. when to use move assignment?
+whenever you use a move constructor
+so that the code does not get buggy later on and we may have more options
+
+4. rule of third
+rule of fifth
+
+5. you can even convert an lvalue to rvalue (temporary) using a std::move
+you will just make it into a temp...and steal its resources heeheehee

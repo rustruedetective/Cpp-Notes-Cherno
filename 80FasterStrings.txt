@@ -1,0 +1,5 @@
+"string manip can have a very negative impact on your performance
+like substring stuff looks like harmless manip but its very costly"
+
+1. the main reason why its bad is "memory allocation"
+string manipulation use memory allocation extensively...

@@ -1,0 +1,6 @@
+**this episode needs to be rewatched along with previous one when static linking problem gets resolved
+
+The namedll.lib file constains pointers to the real name.dll.
+
+1. Use the namedll.lib file when linking.
+2. Put name.dll file in the same directory as executable when running the executable.

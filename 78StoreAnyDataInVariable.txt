@@ -1,0 +1,17 @@
+1. Uses of std::any:-
+
+a. 
+
+2. std::variant is better
+its more type safe as it asks explicitly which types we want
+
+3. variant stores its data in union
+any stores its data for small ones like union but large types it stores as void ptr and allocated on the heap (dynamically) (for variables larger than 32 byte)
+
+4. variant also performs faster for bigger allocations as it stores data in union as opposed to on heap for std::any
+
+5. theres a thing called call stack viewable in visual studio
+
+6. std::any is kind of useless btw...lol
+it even risks us using dynamic allocations
+use variant...lol

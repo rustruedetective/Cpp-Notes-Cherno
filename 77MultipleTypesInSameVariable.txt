@@ -1,0 +1,8 @@
+1. variants are not just unions with type safety
+unions have the size of the largest data type in them
+variants size is the sum of data types we told it at declaration
+
+2. so variants are more close to structs and classes
+
+3. unions are more efficient
+variants are more type safe

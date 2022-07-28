@@ -1,0 +1,63 @@
+1. ---two operands:---
+& and
+| or
+^ xor
+---single operand (unary operator):---
+~ not
+
+
+
+
+2. bitwise and 
+a. operator masking:-
+1010101101101
+0000000001000 <- mask
+0000000001000
+
+we checked if the 4rth bit was 1 or 0 hence masking
+
+if(var & mask){
+    // do stuff
+}
+
+b. extracting bits:-
+1010101101101
+0000000111111 <- extractor
+0000000101101
+xxxxxxx<- these bits are lost
+       xxxxxx<- these bits have been extracted
+
+
+
+
+3. bitwise or
+a. insert bits:-
+0000000101101
+1010101000000 <- inserter
+1010101101101
+
+
+
+
+4. bitwise not
+a. just invert
+or maybe get 111101111 from 000010000
+
+
+
+
+5. bitwise xor
+it gives 1 if bits are different
+a. int b = a^a;   // b = 0;
+on some architectures setting a variable to zero by xoring itself is faster than assigning to 0 (on some ones..very few...not alot so dont do this...)
+
+
+
+
+6. you can put a binary literal in an int
+int x = 0b0101;   // x = 5;
+
+
+
+
+7. std::bitset<>

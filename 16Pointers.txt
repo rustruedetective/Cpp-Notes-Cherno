@@ -1,0 +1,12 @@
+1. smart pointers
+
+2. pointer is an integer that stores a memory address
+
+3. memory in a computer is line a street of one road, the houses on that road are memory
+
+4. pointer does not have a data type of its own, but this is an abstraction to tell what type of memory is pointed to by the pointer
+void type of pointer can point to any data type
+
+5. hover over pointer in vs to get its stored address
+DEBUG -> WINDOWS -> MEMORY
+here you see real memory, and can find your address and can also see the value stored at that address

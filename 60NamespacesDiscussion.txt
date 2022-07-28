@@ -1,0 +1,2 @@
+1. Never include 'using namespace ...;' in a header file
+it might get included at alot of places and break alot of things

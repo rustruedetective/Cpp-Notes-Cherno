@@ -1,0 +1,16 @@
+1. we can visualize performance with chrome tracing
+you can look it up on google...lol
+
+2. go to browser and type this url
+chrome://tracing
+
+3. we input our timing data in a json file
+then put the json in the chrom tracing thing/app
+
+4. cherno's header file does this making of json file
+
+5. Note:
+if u see nested function along with the correct function
+turn the timer objects in functions off
+to get an empty json
+then enable the timer objects to get the real data json

@@ -1,0 +1,45 @@
+*this episode needs to be rewatched to understand dll vs lib at 9 mins.
+
+THEORY:-
+1. Other languages have simple importing syntax
+Or even package managers
+
+Cherno hates package managers
+Keeping dependant libraries inside source of his projects, a good technique
+
+2. There are two things, you can get source code and build completely or just use binaries
+There are more two things, static linking and dynamic linking
+so we have:-
+1 static and 2 dynamic binaries
+3 static and 4 dynamic source code
+
+3. Static means the library is included in your executable app
+   and since the libraries/dlls are linked at link time compiler can perform optimizations
+Dynamic means along with the executable you need the libraries/dlls to be in a nearby folder so executable can call them at run time
+   but since they are linked at runtime, no compiler optimizations done
+(.dll files are dynamic link library files)
+
+
+GETTING LIBRARY:-
+Binaries and static linking in this episode:-
+1. You need to download pre-compiled binaries
+2. The 64 bit vs 32 bit binaries is for target platform and not ur platform
+3. Open the zip folder
+4. Make sure libraries have two parts usually:-
+   1. includes (.h files)
+   2. libraries (.a or .dll or .lib files)
+   (an include directory and a lib directory)
+(your libary could have binaries which are both static and dynamic linking compatible or either one of those)
+
+
+IMPORTING:-
+Now that we have the files ready (include and library files):-
+1. we need to include the header files in include directory
+   a. place the headers folder to a reachable/known place
+   b. incude this folder in path (settings for vs) ( [g++ ... -I ./path/] for gcc )
+
+2. we need to point the linker to the library files where the binaries are
+   a. there might be lib folders each with compiler dependant binaries
+   b. pick the correct folder for you compiler put the library folder to a reachable/known place
+      (the bigger size .lib is the static library file)
+   c. incude the exact library in path (settings for vs) ( [g++ ... -L. /path/ -l libfile] for gcc )

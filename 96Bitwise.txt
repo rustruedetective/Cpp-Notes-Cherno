@@ -1,0 +1,59 @@
+1. the << shift operators are overloaded for cout in cpp
+
+
+
+
+2. little endian vs big endian
+endianess depends on the cpu
+
+5 in binary 0101
+in little endian systems 5 ints will be:-
+0000 0101   0000 0000   0000 0000   0000 0000
+in big endian systems 5 ints will be:-
+0000 0000   0000 0000   0000 0000   0000 0101
+
+little endian the bytes(8 bits) are stored on starting on the lower memory address
+while for big endian they start getting stored from higher memory address
+
+note: the endianess affects the position of the bytes
+not the exact bits within them
+
+most cpus are little endian
+
+you can also use hex editor or your debugger to see the hex values of your variables, endianess will affect them
+
+
+
+
+3. not - inverting bits, storing flags
+xor - hashing
+or - add
+and - subtract, masking, isolating bits
+
+
+
+
+4. << left shift
+>> right shift
+
+var << n; shifts var's bits to the left by n
+var >> n; shifts var's bits to the right by n
+
+<< doubles our number (x2)
+>> halves our number (x1/2)   (integer division, remainder lost for odd numbers)
+
+
+
+
+5. the unsigned and signed numbers behave differently with bit shifting
+
+
+
+
+6. now you could act smart and use a<<=2; instead of a*=2;
+but your an idiot cause compilers have already optimized and converted a*=2 to a<<=2 on their own
+
+
+
+
+7. online compiler which also shows us assembly code: godbolt org

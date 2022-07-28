@@ -1,0 +1,24 @@
+1.  the parameters of a function:-
+    void fun(int a, int b, int c){}
+    at what order do the arguments get evaluated in?:-
+    fun(getResults(), ++a, a--);
+
+2. now this is unreliable
+as which argument gets evaluated first is compiler dependant
+and just check the difference between debug mode and release mode
+
+some compilers might do the evaluations in parallel while others wont
+
+3. so dont evaluate arguments in function calls
+
+4. in case b.
+we have different results in c++11 and c++17 as in 17
+postfix expressoins is sequenced before each expression in the expression list and any default argument
+where as in 11 it must have been afterward
+thus 0 + 0 = 0, was calculated afterwards in 11
+while 1 + 0 = 1, was calculated before in 17
+
+ofcourse note it goes from right to left
+
+5. tidbit: wandbox is an online compiler
+it gives us warnings for c++20

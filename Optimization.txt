@@ -1,0 +1,8 @@
+1. use "\n" instead of std::endl
+std::endl is slow
+
+2. You need to start recording how much each function call takes
+and what other functions it calls and how much they take time
+then try to change the longer calls with faster alternatives
+
+3. use std::variant instead of std::any

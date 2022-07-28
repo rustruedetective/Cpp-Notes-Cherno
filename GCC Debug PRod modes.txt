@@ -1,0 +1,3 @@
+gcc debug mode vs release mode:-
+debug mode: -O0 -g
+release mode: -O2 -s -DNDEBUG

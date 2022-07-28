@@ -1,0 +1,23 @@
+1. there are many ways to do it, no correct way
+and its because, when we measure performance we see this overhead
+a. timers
+b. third party profiling
+c. enclose program in timer 
+
+2. Cherno's method:
+create scope based timer
+
+3. The c++ compiler can optimize code so...it might...
+change our functions a bit thus changing the code we want to measure performance of
+and also change the functions that measure the performance
+
+this happens normally in release mode assembly code
+
+e.g here the compiler might just figure out that the final value of the for loop and push that on the register
+so when the code runs no loops runs we already have the value's final value
+
+4. gcc debug mode vs release mode:-
+debug mode: -O0 -g
+release mode: -O2 -s -DNDEBUG
+
+5. in reality, there are a lot of things to watch out for when trying to measure performance

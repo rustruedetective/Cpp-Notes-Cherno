@@ -1,0 +1,13 @@
+1. Pass by value - simply copies value into new memory address, new memory can be accessed/changed
+
+2. Pass by reference - points to address and value at original memory address can be accessed/changed
+
+3. Pass by reference of two types:-
+
+a. pointers - *ptr: 
+i. needs dereferencing to get value at address
+ii. can be reassigned to new memory addresses
+
+b. reference - &ref:
+i. does not need dereferencing to get value at address
+ii. cannot be reassigned to new memory addresses

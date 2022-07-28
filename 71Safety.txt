@@ -1,0 +1,32 @@
+1. ***Safety in c++ definition: in c++ refers to just deleting the dynammically allocated pointer
+
+2. e.g raw pointer vs smart pointer use
+which is more safe?
+which is better to use
+different people have different opinions
+
+3. after c++11 smart pointers were favored in general as they make safety simple/easier and more robust
+so even if you forget to deallocate memory it gets deallocated for you
+
+4. Cherno: smart pointers, either of stl or your own should be used!
+use raw pointers too...if your specification meets it, like its just some small application nothing that needs to be scaled or maintained...
+but if you only stick to raw pointers...why would you do that? it doesnt make any sense
+
+
+5. raw pointers are easier to read than smart ones but...
+
+6. ***Use smart pointers and raw pointers as you see fit!
+no need to stick to one!
+
+
+7. both raw pointer and smart pointers have advantages and disadvantages
+e.g raw pointers are prone to memory leaks
+smart pointers are not thread safe
+
+
+
+Notes Revision:-
+- when dynamic allocation occurs (malloc) we get a pointer to this memory and it exists until we deallocate the memory ourselves
+- Problem: 1. what if we forget to deallocate this memory, being more aware as a programmer is not a stable solution...lol
+           2. ownership of the pointer, if we just pass a dynamically allocated pointer from one object or function to the other...who will manage it in the end? using some new function only increases problem as now we need a new deallocation function for every other function we used
+- we need to somehow deallocate this memory, in general should always try to automate stuff in programming

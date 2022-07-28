@@ -1,0 +1,10 @@
+1. Classes are a kind of/have their own namespace.
+That is why we use :: scope operator when defining its functions in cpp file
+Even use :: for inner classes or static and sometimes non static members
+
+
+2. Use namespaces in scopes, like main scope, function scope or if scope
+
+3. Avoid putting using namespaces in global, as they undo their purpose to avoid naming conflicts
+
+4. If u only use standar lib, you wont get naming conflicts but you will get them once you use c code or maybe some external library
